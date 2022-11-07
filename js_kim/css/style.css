@@ -1,0 +1,217 @@
+#title {
+    font-size: 64px;
+    position: absolute;
+    height: 430px;
+    width: 700px;
+    background-color: #000;
+    z-index: 10;
+
+}
+
+#button1 {
+    border: 2px solid #333;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: .4s;
+    position: absolute;
+    height: 40px;
+    width: 150px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#button1:hover {
+    background-color: yellow;
+    border-color: yellow;
+    color: black;
+}
+
+.kim-game {
+    z-index: 20;
+    position: absolute;
+}
+
+/* パラメータビュー */
+#parameterView {
+    width: 180px;
+    height: 50px;
+    border: 3px solid;
+    border-color: white;
+    border-radius: 3px;
+    text-align: left;
+    margin: auto;
+}
+
+ul {
+    list-style: none;
+    margin: 12px 0;
+    padding: 0 0 0 22px;
+}
+
+li {
+    display: inline-block;
+}
+
+body {
+    background-color: #333333;
+    color: #FFFFFF;
+    width: 700px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: dorakue;
+
+}
+
+div {
+    background-color: black;
+}
+
+
+/* 敵画像ビュー */
+#enemyImageView {
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+/* コマンドビュー */
+#commandView {
+    display: inline-block;
+    justify-content: right;
+    width: 100px;
+    height: 110px;
+    text-align: center;
+    vertical-align: top;
+    margin: 10px 0 0 30px;
+    padding: 5px;
+    border: 3px solid;
+    border-color: white;
+    border-radius: 3px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* メッセージビュー */
+#messageView {
+    display: inline-block;
+    justify-content: right;
+    width: 300px;
+    height: 120px;
+    text-align: left;
+    vertical-align: top;
+    margin: auto;
+    padding: 10px 10px 10px 20px;
+    border: 3px solid;
+    border-color: white;
+    border-radius: 6px;
+}
+
+p {
+    margin: 0;
+    font-size: 16px;
+}
+
+h1 {
+    margin: 5px;
+    font-size: 20px;
+
+}
+
+h2 {
+    margin: 5px;
+    font-size: 18px;
+}
+
+/*下部のボックスを右に寄せる*/
+.box-right {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/*岸田さん戦闘コマンド*/
+.radio-group {
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    color: #fff;
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 0;
+}
+
+.radio-group::before {
+    position: absolute;
+    top: -0.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    content: attr(data-title);
+}
+
+.radio-area {
+    margin-bottom: 0.5rem;
+}
+
+.radio-area input[type=radio] {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: .3s;
+}
+
+.radio-area label {
+    cursor: pointer;
+}
+
+.radio-area input[type=radio]:checked::before {
+    position: absolute;
+    top: -.4rem;
+    left: -0.2rem;
+    width: 0;
+    height: 0;
+    border: solid 7px transparent;
+    border-left-color: #fff;
+    margin-top: -7px;
+    content: '';
+}
+
+@keyframes shake {
+    from {
+        transform: translateX(-5px) translateY(0px);
+    }
+
+    20% {
+        transform: translateX(5px) translateY(0px);
+    }
+
+    40% {
+        transform: translateX(-10px) translateY(-3px);
+    }
+
+    60% {
+        transform: translateX(10px) translateY(0px);
+    }
+
+    80% {
+        transform: translateX(-10px) translateY(0px);
+    }
+
+    to {
+        transform: translateX(-5px) translateY(0px);
+    }
+}
+
+/*どうぐ*/
+li {
+    color: #fff;
+}

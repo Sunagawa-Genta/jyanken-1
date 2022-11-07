@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>superman</title>
+    <script src="https://code.jquery.com/jquery-3.x.x.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<div>
+
+
+    <body>
+        <audio src="audio/offence.mp3" id="play-button1"></audio>
+        <audio src="audio/nigeru.mp3" id="play-button2"></audio>
+        <audio src="audio/start.mp3" id="play-button3"></audio>
+        <audio src="audio/syubi.mp3" id="play-button4"></audio>
+        <audio src="audio/trump.mp3" id="play-button5"></audio>
+
+
+
+        <div id="game">
+            <div id="title">
+                <img src="img/super-man.png">
+                <input type="button" value="START" id="button1" onclick="myStart()">
+            </div>
+        </div>
+
+        <div id="kim-game">
+            <div id="parameterView">
+                <ul>
+                    <li>きむ</li>
+                    <li>Lv99</li>
+                    <li>HP100</li>
+                </ul>
+            </div>
+            <div>
+                <div id="enemyImageView">
+                    <div>
+                        <img src="img/34322.png" alt="japan" width="200px" height="130px">
+                    </div>
+                    <div id="kim-picture">
+                        <img src="img/kim_img.png" alt="kim" width="150px" height="150px">
+                    </div>
+                    <div>
+                        <img src="img/southkorea.jpg" alt="southkorea" width="200px" height="130px">
+                    </div>
+                </div>
+                <div class="box-right">
+                    <div id="kisida-view">
+                        <img src="img/combine_images.jpg" alt="kisidasann" width="160px" height="160px">
+                    </div>
+                    <div>
+                        <div class="radio-group" data-title="">
+                            <div class="radio-area">
+                                <input type="radio" name="rdo_bg" id="rdobg1" checked="">
+                                <label for="rdobg1">こうげき</label>
+                            </div>
+                            <div class="radio-area">
+                                <input type="radio" name="rdo_bg" id="rdobg2">
+                                <label for="rdobg2">にげる</label>
+                            </div>
+                            <div class="radio-area">
+                                <input type="radio" name="rdo_bg" id="rdobg3">
+                                <label for="rdobg3">ぼうぎょ</label>
+                            </div>
+                            <div class="radio-area">
+                                <div>
+                                    <input type="radio" name="rdo_bg" id="rdobg4">
+                                    <label for="rdobg4">トランプさん</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="messageView">
+                        <p>キムがあらわれた。</p>
+                    </div>
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+                    <script>
+                        /*start画面*/
+                        $("#button1").click(function () {
+                            // 1秒かけて非表示にする
+                            $("#title").hide(1000);
+                        });
+
+
+
+                        $(`#rdobg1`).on(`click`, function () {
+                            const min = 10
+                            const max = 20
+                            const randomNumber1 = Math.floor(Math.random() * (max - min + 1)) + min;
+                            if (randomNumber1 === 10) {
+                                $(`#messageView`).text(`ダメージ10あたえた。`)
+                            } else if (randomNumber1 === 11) {
+                                $(`#messageView`).text(`ダメージ11あたえた。`)
+                            } else if (randomNumber1 === 12) {
+                                $(`#messageView`).text(`ダメージ12あたえた。`)
+                            } else if (randomNumber1 === 13) {
+                                $(`#messageView`).text(`ダメージ13あたえた。`)
+                            } else if (randomNumber1 === 14) {
+                                $(`#messageView`).text(`ダメージ14あたえた。`)
+                            } else if (randomNumber1 === 15) {
+                                $(`#messageView`).text(`ダメージ15あたえた。`)
+                            } else if (randomNumber1 === 16) {
+                                $(`#messageView`).text(`ダメージ16あたえた。`)
+                            } else if (randomNumber1 === 17) {
+                                $(`#messageView`).text(`ダメージ17あたえた。`)
+                            } else if (randomNumber1 === 18) {
+                                $(`#messageView`).text(`ダメージ18あたえた。`)
+                            } else if (randomNumber1 === 19) {
+                                $(`#messageView`).text(`ダメージ19あたえた。`)
+                            } else if (randomNumber1 === 20) {
+                                $(`#messageView`).text(`ダメージ20あたえた。`)
+                            }
+                        });
+
+
+
+                        $(`#rdobg2`).on(`click`, function () {
+                            const min = 0
+                            const max = 2
+                            const randomNumber2 = Math.floor(Math.random() * (max - min + 1)) + min;
+                            if (randomNumber2 === 0) {
+                                $(`#messageView`).text(`にげることはできない。`)
+                            } else if (randomNumber2 === 1) {
+                                $(`#messageView`).text(`ぜったいににげることはできない。`)
+                            } else if (randomNumber2 === 2) {
+                                $(`#messageView`).text(`こくみんをみすてるのか！`)
+                            }
+                        });
+
+                        $(`#rdobg3`).on(`click`, function () {
+                            const min = 1
+                            const max = 2
+                            const randomNumber3 = Math.floor(Math.random() * (max - min + 1)) + min;
+                            if (randomNumber3 === 1) {
+                                $(`#messageView`).text(`ミサイルを撃ち落とした。`)
+
+                            } else if (randomNumber3 === 2) {
+                                $(`#messageView`).text(`アメリカと訓練して守備力が上がった。`)
+                            }
+                        });
+
+                        $(function () {
+                            $("#rdobg1").on("click", function () {
+                                /** アニメーションプロパティを設定 */
+                                $(`#kim-picture`).css("animation", "shake 0.3s");
+                                /** ボタン要素をコピーして古いものと置き換え */
+                                var copied = $(`#kim-picture`).clone(true);
+                            });
+                        });
+
+                        $(function () {
+                            $("#rdobg2").on("click", function () {
+                                /** アニメーションプロパティを設定 */
+                                $(`#kisida-view`).css("animation", "shake 0.3s");
+                                /** ボタン要素をコピーして古いものと置き換え */
+                                var copied = $(this).clone(true);
+                            });
+                        });
+
+
+                        /*攻撃時音声*/
+                        $('#rdobg1').click(function () {
+                            $("#play-button1").get(0).play();
+                        });
+                        /*逃げる音声*/
+                        $('#rdobg2').click(function () {
+                            $("#play-button2").get(0).play();
+                        });
+                        /*スタート音声*/
+                        $('#button1').click(function () {
+                            $("#play-button3").get(0).play();
+                        });
+                        /*守り音声*/
+                        $('#rdobg3').click(function () {
+                            $("#play-button4").get(0).play();
+                        });
+                        /*トランプさん*/
+                        $('#rdobg4').click(function () {
+                            $("#play-button5").get(0).play();
+                        });
+
+                        /*クリック後に相手が攻撃*/
+                        $("#rdobg1").on('click', function () {
+                            //1.5秒後
+                            $('#messageView').delay(1500).queue(function () {
+                                $(this).text("きしだは10のダメージうけた。");
+                                $(`#kisida-view`).css("animation", "shake 0.3s");
+                                $("#play-button1").get(0).play();
+                            });
+                        });
+
+                    </script>
+    </body>
+
+</html>
